@@ -9,8 +9,31 @@ namespace BinarySearchTree
     class Tree
     {
         public Node root;
-        public void SearchForNumber()
+        public bool SearchForNumber(int number)
         {
+            Node presentNode = root;
+            while (true)
+            {
+                if(number == presentNode.numberValue)
+                {
+                    return true;                
+                }
+                else
+                {
+                    if(number <= presentNode.numberValue)
+                    {
+                        presentNode = presentNode.left;
+                    }
+                    else
+                    {
+                        presentNode = presentNode.right;
+                    }
+                }
+                if (presentNode == null)
+                {
+                    return false;
+                }
+            }
 
         }
 

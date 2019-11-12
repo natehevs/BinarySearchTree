@@ -18,9 +18,6 @@ namespace BinarySearchTree
             right = null;
         }
 
-        public void InsertNewValue()
-        {
-
-        }
+        
     }
 }

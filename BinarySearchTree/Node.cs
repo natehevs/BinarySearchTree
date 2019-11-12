@@ -11,9 +11,9 @@ namespace BinarySearchTree
         public int numberValue;
         public Node left;
         public Node right;
-        public Node(int numberValue)
+        public Node(int value)
         {
-            this.numberValue = numberValue;
+            this.numberValue = value;
             left = null;
             right = null;
         }

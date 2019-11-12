@@ -26,17 +26,32 @@ namespace BinarySearchTree
             else
             {
                 Node presentNode = root;
-                Node parent;
                 while (true)
                 {
-                    parent = presentNode;
                     if(value <= presentNode.numberValue)
                     {
-                        presentNode = presentNode.left;
-                        if(presentNode == null)
+
+                        if (presentNode.left == null)
                         {
-                            parent.left = node;
+                            presentNode.left = node;
                             return;
+                        }
+                        else
+                        {
+                            presentNode = presentNode.left;
+                        }
+                    }
+                    else
+                    {
+
+                        if (presentNode.right == null)
+                        {
+                            presentNode.right = node;
+                            return;
+                        }
+                        else
+                        {
+                            presentNode = presentNode.right;
                         }
                     }
                 }
